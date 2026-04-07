@@ -1,3 +1,8 @@
+/* Name: Ahmed alig
+   File: java.js
+   Date: Apr 7, 2026
+   Week 11 assignment Story Generator Part 1 */
+
 // Complete variable definitions and random functions
 
 const customName = document.getElementById("custom-name");
@@ -10,6 +15,8 @@ function randomValueFromArray(array) {
 }
 
 // Raw text strings
+
+
 
 // Willy the Goblin
 // Big Daddy
