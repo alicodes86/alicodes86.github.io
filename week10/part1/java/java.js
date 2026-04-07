@@ -27,6 +27,7 @@ const events = [
 // Solution: Partial return random string function
 
 function returnRandomStoryString() {
+	
   const randomCharacter = randomValueFromArray(characters);
   const randomPlace = randomValueFromArray(places);
   const randomEvent = randomValueFromArray(events);
@@ -41,6 +42,7 @@ function returnRandomStoryString() {
 generateBtn.addEventListener("click", generateStory);
 
 function generateStory() {
+	console.log("Script started running");
   let newStory = returnRandomStoryString();
 
   if (customName.value !== "") {
