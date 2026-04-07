@@ -36,11 +36,15 @@ const events = [
 // Partial return random string function
 
 function returnRandomStoryString() {
+	const randomCCharacter = randomValueFromArray(characters);
+	const randomPlace = randomValueFromArray(places);
+	const randomEvent = randomValueFromArray(events);
 	
   // It was 94 Fahrenheit outside, so :insertx: went for a walk.
-  When they got to :inserty:, they stared in horror for a few moments,
-  then :insertz:. Bob saw the whole thing,
-  but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
+  let storyText = 'It was 94 Fahrenheit outside, so ${randomCharacter} went for a walk.
+  When they got to ${randomPlace}, they stared in horror for a few moments,
+  then %{randomEvent}. Bob saw the whole thing,
+  but was not surprised — ${tandomCharacter} weighs 300 pounds, and it was a hot day. ';
 
   return storyText;
 }
