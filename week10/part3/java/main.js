@@ -1,4 +1,7 @@
-
+/* Name: Ahmed alig
+   File: java.js
+   Date: Apr 8, 2026
+   Week 11 assignment bouncing balls Part 3 */
 
 
 // setup canvas
