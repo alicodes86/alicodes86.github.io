@@ -13,6 +13,7 @@ const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 
 // Solution: Create a data object
+
 const images = [
   { filename: "pic1.jpg", alt: "Closeup of a human eye" },
   { filename: "pic2.jpg", alt: "Rock that looks like a wave" },
@@ -20,8 +21,7 @@ const images = [
   { filename: "pic4.jpg", alt: "Section of wall from a pharaoh's tomb" },
   { filename: "pic5.jpg", alt: "Large moth on a leaf" },
 ];
-	{ filename: "pic5.jpg", alt: "Large moth on a leaf" },
-];
+
 // Solution: Loop through the images
 
 // Create a baseURL constant containing the baseURL of the images
@@ -49,3 +49,29 @@ for (const image of images) {
     }
   });
 }
+
+// Solution: Create the updateDisplayedImage() function
+
+function updateDisplayedImage(e) {
+  displayedImage.src = e.target.src;
+  displayedImage.alt = e.target.alt;
+}
+
+// Solution: Wire up the Darken/Lighten button
+
+// Add a click event listener on the button
+btn.addEventListener("click", () => {
+  // If the button has a "dark" class set,
+  // change text to "Lighten" and make the overlay darker
+  if (btn.classList.contains("dark")) {
+    btn.textContent = "Lighten";
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
+  } else {
+    // Else, change text to "Darken" and make
+    // the overlay lighter
+    btn.textContent = "Darken";
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
+  }
+  // Toggle the class ready for the next button press
+  btn.classList.toggle("dark");
+});
