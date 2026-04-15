@@ -26,56 +26,60 @@ body {
 
 /* || typography */
 
-font[size="7"], font[size="6"], font[size="5"] {
+h1, h2, h3 {
   font-family: 'Sonsie One', cursive;
   color: #2a2a2a;
+  margin-top: 0;
 }
 
-p, input, li, table, label {
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: #2a2a2a;
-}
-
-font[size="7"] {
-  font-size: 4rem;
+h1 {
+  font-size: 4.5rem;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 10px black;
+  margin: 0;
 }
 
-font[size="6"] {
-  font-size: 3rem;
-  text-align: center;
+h2 {
+  font-size: 3.8rem;
+  margin-bottom: 2rem;
 }
 
-font[size="5"] {
-  font-size: 2.2rem;
+h3 {
+  font-size: 2.8rem;
+  margin: 3rem 0 1.5rem;
 }
 
 p, li, table {
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: 1.8rem;
+  line-height: 1.6;
 }
 
 /* || header layout */
+.header {
+  background-color: #cfcfe3;
+  padding: 2rem 0;
+  margin-bottom: 10px;
+}
 
-div[class="nav"], article, footer, .secondary {
-  background-color: green;
+.nav, article, footer, .secondary {
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 article, footer, .secondary {
-  padding: 10px 30px;
+  padding: 20px 30px;
 }
 
 article {
   margin-right: 10px;
 }
 
-div[class="nav"] {
-  height: 50px;
-  background-color: ff80ff;
+.nav {
+  min-height: 50px;
+  background-color: #f5f5f5;
   display: flex;
-  padding: 1% 0;
+  align-items: center;
+  padding: 1.2rem 2rem;
   margin-bottom: 10px;
 }
 
@@ -92,12 +96,13 @@ div[class="nav"] li {
   flex: 1;
 }
 
-div[class="nav"] a {
+.nav a {
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: #333;
+  font-weight: bold;
 }
 
 div[class="nav"] .search {
@@ -129,6 +134,8 @@ div[class="nav"] .search {
 
 main {
   display: flex;
+  gap: 10px;
+  align-item: flex-start;
 }
 
 article {
@@ -171,7 +178,11 @@ tbody tr:nth-child(odd) {
 
 img, audio {
   display: block;
-  margin: 0 auto;
+  margin: 2rem auto;
+}
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 audio {
@@ -189,8 +200,9 @@ audio {
   cursor: pointer;
 }
 
-.comments font[size="6"] {
-  font-size: 2rem;
+.comments h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
 
 .comments font[size="6"]:nth-of-type(2) {
