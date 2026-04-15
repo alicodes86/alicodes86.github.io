@@ -1,4 +1,7 @@
-
+/* Name: Ahmed ali
+   File: java.js
+   Date: Apr 15, 2026
+   Week 13 assignment Web Accessibility */
 
 
 // functionality for showing/hiding the comments section
