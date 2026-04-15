@@ -35,11 +35,16 @@ form.onsubmit = function(e) {
 };
 
 function submitComment() {
+  const nameValue = nameField.value.trim();
+  const commentValue = commentField.value.trim();
+
+  if (nameValue === '' || commentValue === '') {
+    return;
+  }
+
   const listItem = document.createElement('li');
   const namePara = document.createElement('p');
   const commentPara = document.createElement('p');
-  const nameValue = nameField.value;
-  const commentValue = commentField.value;
 
   namePara.textContent = nameValue;
   commentPara.textContent = commentValue;
